@@ -32,29 +32,29 @@ fetchApi(url).then((res)=>{
 
 function setSingle(response){
     let res=response;    
-    let urlOMDB=`http://omdbapi.com/?apikey=${omdbAPIkey}&i=${res.imdb}`;
-    console.log(urlOMDB);
-    fetchApi(urlOMDB).then((omdbRes)=>{
-        res.genre=omdbRes.Genre;
-        res.ratings=omdbRes.Ratings;
-        console.log(omdbRes);
-        console.log(res);
+    // let urlOMDB=`http://omdbapi.com/?apikey=${omdbAPIkey}&i=${res.imdb}`;
+    // console.log(urlOMDB);
+    // fetchApi(urlOMDB).then((omdbRes)=>{
+    //     res.genre=omdbRes.Genre;
+    //     res.ratings=omdbRes.Ratings;
+    //     console.log(omdbRes);
+    //     console.log(res);
        setDetails(res);
-    })
+    // })
 }
 //Set Details Tabs
 function setDetails(res){
     let title=document.querySelector('.singleName');
     title.innerText=res.title;
     let release=document.querySelector('.release');
-    let genre=document.querySelector('.genre');
+    // let genre=document.querySelector('.genre');
     release.innerText=`(${res.release_date})`;
-    genre.innerText=`${res.genre}`;
+    // genre.innerText=`${res.genre}`;
 
     // if(res.ratings){
-        if(res.ratings.length>=1)createRatingCanvas(res.ratings[0].Source,parseFloat(res.ratings[0].Value)*10);
-        if(res.ratings.length>=2)createRatingCanvas(res.ratings[1].Source,parseInt(res.ratings[1].Value));
-        if(res.ratings.length>=3)createRatingCanvas(res.ratings[2].Source,parseInt(res.ratings[2].Value));
+        // if(res.ratings.length>=1)createRatingCanvas(res.ratings[0].Source,parseFloat(res.ratings[0].Value)*10);
+        // if(res.ratings.length>=2)createRatingCanvas(res.ratings[1].Source,parseInt(res.ratings[1].Value));
+        // if(res.ratings.length>=3)createRatingCanvas(res.ratings[2].Source,parseInt(res.ratings[2].Value));
 
     // }
     

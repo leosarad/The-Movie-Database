@@ -57,7 +57,7 @@ function setTrendingSlider(moviesArr){
             setMovieBanner(movies[i]);
     })
     div.onclick=()=>{
-        window.location.href=`/single.html?id=${item.id}&type=movie`;
+        window.location.href=`./single.html?id=${item.id}&type=movie`;
     }
     })
 }
@@ -77,7 +77,7 @@ function setPopularSlider(movies){
         parent.appendChild(slide); 
         slide.innerHTML=`<img src="https://image.tmdb.org/t/p/w200/${item.poster_path}">`;
         slide.onclick=()=>{
-            window.location.href=`/single.html?id=${item.id}&type=movie`;
+            window.location.href=`./single.html?id=${item.id}&type=movie`;
         }
     })
 }
@@ -97,7 +97,7 @@ function setTopRatedSlider(movies){
         parent.appendChild(slide); 
         slide.innerHTML=`<img src="https://image.tmdb.org/t/p/w200/${item.poster_path}">`;
         slide.onclick=()=>{
-            window.location.href=`/single.html?id=${item.id}&type=movie`;
+            window.location.href=`./single.html?id=${item.id}&type=movie`;
         }
     })
 }
@@ -146,7 +146,7 @@ function getTrendingTV(){
             parent.appendChild(slide); 
             slide.innerHTML=`<img src="https://image.tmdb.org/t/p/w200/${item.poster_path}">`;
             slide.onclick=()=>{
-                window.location.href=`/single.html?id=${item.id}&type=tv`;
+                window.location.href=`./single.html?id=${item.id}&type=tv`;
             }
         })
     }
@@ -166,7 +166,7 @@ function getOnAirTV(){
             slide.innerHTML=`<img src="https://image.tmdb.org/t/p/w200/${item.poster_path}">`;
 
             slide.onclick=()=>{
-                window.location.href=`/single.html?id=${item.id}&type=tv`;
+                window.location.href=`./single.html?id=${item.id}&type=tv`;
             }
             
         })
@@ -188,7 +188,7 @@ function getTopRatedTV(){
             slide.innerHTML=`<img src="https://image.tmdb.org/t/p/w200/${item.poster_path}">`;
 
             slide.onclick=()=>{
-                window.location.href=`/single.html?id=${item.id}&type=tv`;
+                window.location.href=`./single.html?id=${item.id}&type=tv`;
             }
 
         })
@@ -218,7 +218,7 @@ function setSearchResult(movie){
     title=movie.title;
     detailsDiv.innerHTML=`<p><a>${title}</a></p>`;
     result.onclick=()=>{
-        window.location.href=`/single.html?id=${movie.id}&type=${movie.media_type}`;
+        window.location.href=`./single.html?id=${movie.id}&type=${movie.media_type}`;
     }
 }
 searchForm.onsubmit=function searchFunction(e){
